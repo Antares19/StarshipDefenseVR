@@ -23,5 +23,8 @@ namespace Arty
 
         internal float currentTimeToSpawn;
 
+
+        public GameObject ClosestNode;
+
     }
 }
