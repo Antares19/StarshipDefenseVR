@@ -6,7 +6,7 @@ TagManager:
   tags:
   - static object
   - Interactive object
-  - enemy
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -16,15 +16,9 @@ TagManager:
   - UI
   - 
   - 
-<<<<<<< HEAD
-  - buildings
+  - Buildings
   - infrastructure
-  - character
-=======
-  - PostProcessing
-  - PointerGrabbableObject
-  - 
->>>>>>> b3ff34768b8b6623796a2f945364692b45e542c0
+  - Enemy
   - 
   - 
   - 
