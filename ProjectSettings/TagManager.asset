@@ -3,10 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - static object
-  - Interactive object
-  - enemy
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -16,15 +13,9 @@ TagManager:
   - UI
   - 
   - 
-<<<<<<< HEAD
-  - buildings
-  - infrastructure
-  - character
-=======
-  - PostProcessing
-  - PointerGrabbableObject
   - 
->>>>>>> b3ff34768b8b6623796a2f945364692b45e542c0
+  - 
+  - 
   - 
   - 
   - 
