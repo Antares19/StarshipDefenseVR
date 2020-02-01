@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1133,6 +1133,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 650726189}
+  - component: {fileID: 650726190}
+  - component: {fileID: 650726191}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -1154,6 +1156,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &650726190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650726188}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eeadee5fcda00e428faac4ebd45612d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &650726191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650726188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de54ffd1f0e8d2842b57ed88c493f6a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawners:
+  - {fileID: 1851352985}
+  - {fileID: 1365710151}
+  _enemiesMaxCount: 100
+  _prefab: {fileID: 7831458112605407432, guid: 07ae6b7e1aeacbd4295b776f57b822b8, type: 3}
+  _maxRandomDistanceFromSpawnerOnSpawn: 1
 --- !u!1 &679193775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,6 +1806,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1365710150}
+  - component: {fileID: 1365710151}
   m_Layer: 0
   m_Name: Spawner2
   m_TagString: SpawnPoint
@@ -1795,6 +1828,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1365710151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365710149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e023f1b1299b47f498527bd92d1b9685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToSpawn: 2
+  TimeToActive: 4
 --- !u!1 &1407733198
 GameObject:
   m_ObjectHideFlags: 0
@@ -2362,6 +2409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1851352984}
+  - component: {fileID: 1851352985}
   m_Layer: 0
   m_Name: Spawner1
   m_TagString: SpawnPoint
@@ -2383,6 +2431,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1851352985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851352983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e023f1b1299b47f498527bd92d1b9685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToSpawn: 2
+  TimeToActive: 4
 --- !u!1 &1949355969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2662,3 +2724,72 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086687619}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &8800147903686591371
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7831458112605407432, guid: 07ae6b7e1aeacbd4295b776f57b822b8,
+        type: 3}
+      propertyPath: m_Name
+      value: Sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846550728371519407, guid: 07ae6b7e1aeacbd4295b776f57b822b8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.6322489
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846550728371519407, guid: 07ae6b7e1aeacbd4295b776f57b822b8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.369873
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846550728371519407, guid: 07ae6b7e1aeacbd4295b776f57b822b8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.813552
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846550728371519407, guid: 07ae6b7e1aeacbd4295b776f57b822b8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846550728371519407, guid: 07ae6b7e1aeacbd4295b776f57b822b8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846550728371519407, guid: 07ae6b7e1aeacbd4295b776f57b822b8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846550728371519407, guid: 07ae6b7e1aeacbd4295b776f57b822b8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846550728371519407, guid: 07ae6b7e1aeacbd4295b776f57b822b8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846550728371519407, guid: 07ae6b7e1aeacbd4295b776f57b822b8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846550728371519407, guid: 07ae6b7e1aeacbd4295b776f57b822b8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846550728371519407, guid: 07ae6b7e1aeacbd4295b776f57b822b8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07ae6b7e1aeacbd4295b776f57b822b8, type: 3}
