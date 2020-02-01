@@ -20,6 +20,7 @@ namespace Arty
         /// время, через которое
         /// </summary>
         public float TimeToActive;
+        public GameObject ClosestNode;
 
         internal float currentTimeToSpawn;
 
