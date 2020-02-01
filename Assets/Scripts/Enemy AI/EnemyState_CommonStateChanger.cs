@@ -2,6 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyState_Hanging : EnemyState
+public class EnemyState_CommonStateChanger : EnemyState
 {
 }

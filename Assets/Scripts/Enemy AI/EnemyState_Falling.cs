@@ -2,17 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyState_Falling : MonoBehaviour
+public class EnemyState_Falling : EnemyState
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Tick(EnemyData enemy, EnemyAI enemyAI)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // ЕСЛИ УПАЛ НА ЗЕМЛЮ, ТО
+        //ChangeToState(enemy, enemyAI.State_GoingToWaypoint, enemyAI);
     }
 }

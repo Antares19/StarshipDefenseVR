@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyState_AttachedToBuildingAndCarrying : MonoBehaviour
+public class EnemyState_AttachedToBuildingAndCarrying : EnemyState
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void OnStateEnter(EnemyData enemy, EnemyAI enemyAI)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        enemy.Animator.SetBool("Walk", true);
+        enemy.Animator.SetBool("Grab", true);
+        base.OnStateEnter(enemy, enemyAI);
     }
 }

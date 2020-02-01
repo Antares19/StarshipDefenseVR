@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyState_GoingToWayPoint : MonoBehaviour
+public class EnemyState_GoingToWayPoint : EnemyState
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Tick(EnemyData enemy, EnemyAI enemyAI)
     {
-        
+        //ДВИГАЕМ МОБА
+        //ЕСЛИ ДОШЛИ ДО НОДА,
+        //ВЫБИРАЕМ СЛЕДУЮЩУЮ ТОЧКУ НАЗНАЧЕНИЯ.
+        //ЕСЛИ ЭТО ДОМ, то
+        //enemyAI.State_GoingToBuilding.OnStateEnter(enemy, enemyAI);
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnStateEnter(EnemyData enemy, EnemyAI enemyAI)
     {
-        
+        enemy.Animator.SetBool("Walk", true);
+        enemy.Animator.SetBool("Grab", false);
     }
 }
