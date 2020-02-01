@@ -23,6 +23,8 @@ namespace Arty
 
         private void Update()
         {
+            _deltaTime = Time.deltaTime;
+
 
         }
     }
