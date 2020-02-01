@@ -3,26 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private SpawnerManager _spawner;
+
+    [SerializeField] private SpawnerManager _spawnManager;
+
+    public float EnemySpeedFree;
+    public float EnemySpeedCarry;
+    public float DistanceToTargetToCountAsReached;
+    public float EnemyHangTimeWhenBuildingIsGrabbed;
 
     private Dictionary<Enemy, EnemyData> _activeEnemies;
     public Dictionary<Building, BuildingData> Buildings { get; private set; }
 
+    public Mover Mover { get; private set;}
+
+
     //public EnemyState State_StateChanger { get; private set; }
 
+    public EnemyState State_Idle { get; private set; }
+    public EnemyState State_GoingToWaypoint { get; private set; }
+    public EnemyState State_GoingToBuilding { get; private set; }
     public EnemyState State_WaitingAtBuilding { get; private set; }
     public EnemyState State_CarryingBuilding { get; private set; }
     public EnemyState State_Hanging { get; private set; }
-    public EnemyState State_GoingToWaypoint { get; private set; }
-    public EnemyState State_GoingToBuilding { get; private set; }
+    public EnemyState State_Falling { get; private set; }
+
+    public float DeltaTime { get; private set; }
+    
 
     private void Awake()
     {
+        Mover = new Mover();
+
+        State_Idle = new EnemyState_Idle();
         State_GoingToWaypoint = new EnemyState_GoingToWayPoint();
         State_GoingToBuilding = new EnemyState_GoingToBuilding();
         State_CarryingBuilding = new EnemyState_AttachedToBuildingAndCarrying();
         State_WaitingAtBuilding = new EnemyState_AttachedToBuildingAndWaiting();
         State_Hanging = new EnemyState_Hanging();
+        State_Falling = new EnemyState_Falling();
     }
 
     private void Start()
@@ -30,40 +48,22 @@ public class EnemyAI : MonoBehaviour
         _activeEnemies = new Dictionary<Enemy, EnemyData>();
         Buildings = new Dictionary<Building, BuildingData>();
 
-        //Добавить зданий!!
+        var allBuildingsInScene = FindObjectsOfType<Building>();
+        foreach (var building in allBuildingsInScene)
+        {
+            AddBuildingToList(building);
+        }
 
-        _spawner.OnEnemySpawn += AddEnemyToActiveEnemiesList;
+        _spawnManager.OnEnemySpawn += AddEnemyToActiveEnemiesList;
 
     }
 
     private void Update()
     {
+        DeltaTime = Time.deltaTime;
+
         UpdateEnemies();
         CarryBuildings();
-    }
-
-    public void AddBuildingToList(Building building)
-    {
-        Buildings.Add(building, new BuildingData());
-        building.OnPlayerGrabbedBuilding += HandleBuildingGrabbed;
-    }
-
-    private void AddEnemyToActiveEnemiesList(Enemy enemyMono)
-    {
-        _activeEnemies.Add(enemyMono, new EnemyData(enemyMono, State_CarryingBuilding));
-    }
-
-
-
-    private void CarryBuildings()
-    {
-        foreach (var building in Buildings)
-        {
-            if (building.Value.IsBeingCarried)
-            {
-                //ДВИГАЕМ ДОМ
-            }
-        }
     }
 
     private void UpdateEnemies()
@@ -75,8 +75,53 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    private void CarryBuildings()
+    {
+        foreach (var building in Buildings)
+        {
+            if (building.Value.IsBeingCarried)
+            {
+                Mover.Move(building.Value.Transform, building.Value.CarryTarget.transform, EnemySpeedCarry * DeltaTime);
+            }
+        }
+    }
+
+    
+    public void AddBuildingToList(Building building)
+    {
+        Buildings.Add(building, new BuildingData());
+        building.OnPlayerGrabbedBuilding += HandleBuildingGrabbed;
+    }
+
+    public void FindNewTargetNodeForEnemy(EnemyData enemy)
+    {
+        enemy.CurrentTarget = enemy.CurrentTarget.GetComponent<Node>().getRandomPlayerPath().gameObject;
+    }
+
+    public void TurnEnemyToFaceTarget(EnemyData enemy)
+    {
+        enemy.Transform.LookAt(new Vector3
+            (
+                enemy.CurrentTarget.transform.position.x,
+                enemy.Transform.position.y,
+                enemy.CurrentTarget.transform.position.z
+            ));
+    }
+
+    private void AddEnemyToActiveEnemiesList(Enemy enemyMono, GameObject closestNode)
+    {
+        _activeEnemies.Add(enemyMono, new EnemyData(enemyMono));
+        _activeEnemies[enemyMono].CurrentTarget = closestNode;
+        State_GoingToWaypoint.OnStateEnter(_activeEnemies[enemyMono], this);
+    }
+
+
+ 
+
     private void HandleBuildingGrabbed(Building building)
     {
+        Buildings[building].StopCarrying();
+
         foreach (var dependentEnemy in Buildings[building].DependentEnemies)
         {
             var enemy = _activeEnemies[dependentEnemy];
@@ -109,29 +154,40 @@ public class EnemyData
     public Building BuildingAttachedTo;
     public Animator Animator;
 
+    public float HangTimer;
     public EnemyState CurrentState;
 
-    public EnemyData(Enemy enemyMono, EnemyState initialState)
+    public EnemyData(Enemy enemyMono)
     {
         EnemyMono = enemyMono;
         Transform = enemyMono.transform;
         RigidBody = enemyMono.GetComponent<Rigidbody>();
         Animator = enemyMono.GetComponent<Animator>();
-
-        CurrentState = initialState;
-    }
+    }    
 }
 
 public class BuildingData
 {
-    public List<Enemy> DependentEnemies { get; private set; }
-
-    public bool IsBeingCarried { get; internal set; }
+    public List<Enemy> DependentEnemies;
+    public GameObject CarryTarget { get; private set; }
+    public bool IsBeingCarried { get; private set; }
+    public Transform Transform { get; private set; }
 
     public BuildingData()
     {
         DependentEnemies = new List<Enemy>();
     }
 
-    
+    public void StartCarryingToTarget(GameObject target)
+    {
+        IsBeingCarried = true;
+        CarryTarget = target;
+    }
+
+    public void StopCarrying()
+    {
+        IsBeingCarried = false;
+        CarryTarget = null;
+    }
+
 }

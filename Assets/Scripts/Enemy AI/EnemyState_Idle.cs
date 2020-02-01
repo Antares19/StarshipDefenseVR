@@ -6,7 +6,7 @@ public class EnemyState_Idle : EnemyState
 {
     public override void Tick(EnemyData enemy, EnemyAI enemyAI)
     {
-        //ищем нод и переходим к goingToWayPoint
+        enemyAI.FindNewTargetNodeForEnemy(enemy);
         enemyAI.State_GoingToWaypoint.OnStateEnter(enemy, enemyAI);
     }
 
