@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private SpawnerManager _spawner;
 
     private List<EnemyData> _activeEnemies;
+    private Dictionary<GameObject, EnemyData> _buildingsWithAttachedEnemies;//не геймобжект, а билдинг
     private EnemyState _enemyState_Idle;
          
     private void Start()
@@ -37,6 +38,8 @@ public class EnemyData
     public Enemy EnemyMono;
     public Transform Transform;
     public Rigidbody RigidBody;
+    public GameObject CurrentTarget;
+
     public EnemyState CurrentState;
 
     public EnemyData(Enemy enemyMono, EnemyState initialState)
