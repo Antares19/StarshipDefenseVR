@@ -33,14 +33,51 @@ public class Node : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         nodesToHomeTransform = new Transform[_nodesToHome.Count];
         for (int i = 0; i < _nodesToHome.Count; i++)
             nodesToHomeTransform[i] = _nodesToHome[i].transform;
 
 
+        /*
         nodesToPlayerTransform = new Transform[_nodesToPlayer.Count];
         for (int i = 0; i < _nodesToPlayer.Count; i++)
             nodesToPlayerTransform[i] = _nodesToPlayer[i].transform;
+*/
+
+        nodesToPlayerTransform = new Transform[3];
+        _nodesToPlayer = new List<GameObject>();
+
+        
+
+
+
+        List<Transform> others = new List<Transform>();
+
+        foreach (Transform child in transform.parent.gameObject.transform)
+            others.Add(child);
+
+            others.Sort(delegate (Transform a, Transform b)
+        {
+            return Vector2.Distance(this.transform.position, a.position)
+            .CompareTo(
+              Vector2.Distance(this.transform.position, b.position));
+        });
+
+
+        others.RemoveAt(0);
+        int j = 0;
+        foreach (Transform child in others)
+        {
+            if (j<3)
+                {
+
+                nodesToPlayerTransform[j] = child.transform;
+                _nodesToPlayer.Add(child.transform.gameObject);
+                j++;
+                }
+        }
+
 
 
 

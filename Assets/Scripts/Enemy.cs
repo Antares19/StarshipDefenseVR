@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     }
 
 
-    float speed = 5;
+    double speed = 5*0.06;
 
     void Update()
     {
@@ -22,8 +22,8 @@ public class Enemy : MonoBehaviour
         
         if (moveNode!=null)
         {
-            float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, moveNode.transform.position, step);
+            double step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, moveNode.transform.position, (float)step);
             if (Vector3.Distance(transform.position, moveNode.transform.position) < 0.01f)
             {
                 setMoveNode(moveNode.getRandomPlayerPath());
