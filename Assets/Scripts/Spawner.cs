@@ -15,11 +15,11 @@ namespace Arty
         /// <summary>
         /// частота спауна
         /// </summary>
-        [SerializeField] private float _timeToSpawn;
+        public float TimeToSpawn;
         /// <summary>
         /// время, через которое
         /// </summary>
-        [SerializeField] private float _timeToActive;
+        public float TimeToActive;
 
         internal float currentTimeToSpawn;
 
