@@ -29,3 +29,5 @@ ExportedObj/
 # Builds
 *.apk
 *.unitypackage
+
+Assets/Models/Chars/Hand.fbx.meta

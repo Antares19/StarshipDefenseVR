@@ -70,7 +70,6 @@ public class EnemyAI : MonoBehaviour
     {
         foreach (var enemy in _activeEnemies)
         {
-            Debug.Log(enemy + " is in " + enemy.Value.CurrentState);
             enemy.Value.CurrentState.Tick(enemy.Value, this);
         }
     }
