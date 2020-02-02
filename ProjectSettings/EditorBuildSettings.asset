@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/VRDK_changed.unity
     guid: 33a770456cf624c41838a4ec1a1de55f
+  - enabled: 1
+    path: Assets/Scenes/HandFix.unity
+    guid: ea36db5e602359f46b078301070edc68
   m_configObjects: {}

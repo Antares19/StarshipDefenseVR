@@ -36,7 +36,18 @@ namespace Ar
         private void Update()
         {
             _timeToEnd -= Time.deltaTime;
-            _ui.SetState(string.Format("{0} / {1}", currentHouses, totalHouses), _timeToEnd);
+
+            if (_timeToEnd > 0)
+            {
+                _ui.SetState(string.Format("{0} / {1}", currentHouses, totalHouses), _timeToEnd);
+            }
+            else
+            {
+                _ui.SetState(string.Format("{0} / {1}", currentHouses, totalHouses), 0);
+                _ui.SetPlaying(false, true);
+            }
+
+            
         }
 
         private void OnHomeLost()
@@ -54,6 +65,8 @@ namespace Ar
             Messenger.RemoveListener(HomeEvent.lostHome, OnHomeLost);
             Messenger.RemoveListener(HomeEvent.receiveHome, OnHomeReceive);
         }
+
+        
     }
 
    
