@@ -2,6 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public static class DrawArrow
+{
+    public static void ForGizmo(Vector3 pos, Vector3 direction, float arrowHeadLength = 0.25f, float arrowHeadAngle = 20.0f)
+    {
+        Gizmos.DrawRay(pos, direction);
+
+        Vector3 right = Quaternion.LookRotation(direction) * Quaternion.Euler(0, 180 + arrowHeadAngle, 0) * new Vector3(0, 0, 1);
+        Vector3 left = Quaternion.LookRotation(direction) * Quaternion.Euler(0, 180 - arrowHeadAngle, 0) * new Vector3(0, 0, 1);
+        Gizmos.DrawRay(pos + direction, right * arrowHeadLength);
+        Gizmos.DrawRay(pos + direction, left * arrowHeadLength);
+    }
+
+    public static void ForGizmo(Vector3 pos, Vector3 direction, Color color, float arrowHeadLength = 0.25f, float arrowHeadAngle = 20.0f)
+    {
+        Gizmos.color = color;
+        Gizmos.DrawRay(pos, direction);
+
+        Vector3 right = Quaternion.LookRotation(direction) * Quaternion.Euler(0, 180 + arrowHeadAngle, 0) * new Vector3(0, 0, 1);
+        Vector3 left = Quaternion.LookRotation(direction) * Quaternion.Euler(0, 180 - arrowHeadAngle, 0) * new Vector3(0, 0, 1);
+        Gizmos.DrawRay(pos + direction, right * arrowHeadLength);
+        Gizmos.DrawRay(pos + direction, left * arrowHeadLength);
+    }
+
+    public static void ForDebug(Vector3 pos, Vector3 direction, float arrowHeadLength = 0.25f, float arrowHeadAngle = 20.0f)
+    {
+        Debug.DrawRay(pos, direction);
+
+        Vector3 right = Quaternion.LookRotation(direction) * Quaternion.Euler(0, 180 + arrowHeadAngle, 0) * new Vector3(0, 0, 1);
+        Vector3 left = Quaternion.LookRotation(direction) * Quaternion.Euler(0, 180 - arrowHeadAngle, 0) * new Vector3(0, 0, 1);
+        Debug.DrawRay(pos + direction, right * arrowHeadLength);
+        Debug.DrawRay(pos + direction, left * arrowHeadLength);
+    }
+    public static void ForDebug(Vector3 pos, Vector3 direction, Color color, float arrowHeadLength = 0.25f, float arrowHeadAngle = 20.0f)
+    {
+        Debug.DrawRay(pos, direction, color);
+
+        Vector3 right = Quaternion.LookRotation(direction) * Quaternion.Euler(0, 180 + arrowHeadAngle, 0) * new Vector3(0, 0, 1);
+        Vector3 left = Quaternion.LookRotation(direction) * Quaternion.Euler(0, 180 - arrowHeadAngle, 0) * new Vector3(0, 0, 1);
+        Debug.DrawRay(pos + direction, right * arrowHeadLength, color);
+        Debug.DrawRay(pos + direction, left * arrowHeadLength, color);
+    }
+}
+
+
 public class Node : MonoBehaviour
 {
 
@@ -39,12 +84,14 @@ public class Node : MonoBehaviour
             nodesToHomeTransform[i] = _nodesToHome[i].transform;
 
 
-        /*
+        
         nodesToPlayerTransform = new Transform[_nodesToPlayer.Count];
         for (int i = 0; i < _nodesToPlayer.Count; i++)
             nodesToPlayerTransform[i] = _nodesToPlayer[i].transform;
-*/
 
+
+
+        /*
         nodesToPlayerTransform = new Transform[3];
         _nodesToPlayer = new List<GameObject>();
 
@@ -77,7 +124,7 @@ public class Node : MonoBehaviour
                 j++;
                 }
         }
-
+        */
 
 
 
@@ -87,6 +134,11 @@ public class Node : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        foreach (var v in nodesToPlayerTransform)
+            DrawArrow.ForDebug(transform.position+new Vector3(0,0.03f,0), v.position - transform.position + new Vector3(0, 0.03f, 0), Color.yellow,0.05f);
+
+
+        foreach (var v in nodesToHomeTransform)
+            DrawArrow.ForDebug(transform.position + new Vector3(0.01f, 0.04f, 0), v.position - transform.position + new Vector3(0.01f, 0.04f, 0), Color.blue, 0.05f);
     }
 }
