@@ -14,7 +14,7 @@ public class EnemyState_GoingToWayPoint : EnemyState
             return;
 
         //ВЫБИРАЕМ СЛЕДУЮЩУЮ ТОЧКУ НАЗНАЧЕНИЯ.
-        if (Random.Range(0,2) == 0)
+        if (Random.Range(0,3) > 0)
         {
             //building
             enemy.TargetBuilding = enemy.TargetWaypoint.GetComponent<Node>().getRandomBuildingPath();

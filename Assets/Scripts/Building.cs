@@ -66,7 +66,7 @@ public class Building : MonoBehaviour
             }
 
 
-            if (transform.position.y< 0.1)
+            if (transform.position.y< 0.4)
             {
                 onFire = false;
             }
