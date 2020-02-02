@@ -78,9 +78,9 @@ public class Node : MonoBehaviour
         return _nodesToPlayer[UnityEngine.Random.Range(0, _nodesToPlayer.Count)].GetComponent<Node>();
     }
 
-    public NodeBuilding getRandomBuildingPath()
+    public Building getRandomBuildingPath()
     {
-        return _buildings[UnityEngine.Random.Range(0, _buildings.Count)].GetComponent<NodeBuilding>();
+        return _buildings[UnityEngine.Random.Range(0, _buildings.Count)].GetComponent<Building>();
     }
     // Start is called before the first frame update
     void Start()
