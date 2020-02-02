@@ -17,10 +17,28 @@ namespace AK
         static const AkUniqueID AMB_WIND_DARK = 225337123U;
         static const AkUniqueID BREAK_BUILDING = 2146637009U;
         static const AkUniqueID ENEMY_FOOTSTEPS = 3217092839U;
+        static const AkUniqueID ENEMY_SWITCH_ATTACK = 3232182425U;
+        static const AkUniqueID ENEMY_SWITCH_FEAR = 3274687119U;
         static const AkUniqueID ENEMY_VOICE = 390963704U;
+        static const AkUniqueID FIRE_LOOP_START = 1417826751U;
         static const AkUniqueID PLAY_AMB_BIRD = 139049024U;
-        static const AkUniqueID WALL_BREAK = 11041865U;
+        static const AkUniqueID QUENCHING = 1058868581U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace ENEMY_VOICE
+        {
+            static const AkUniqueID GROUP = 390963704U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID ENEMY_VOICE_FEAR = 2500450829U;
+                static const AkUniqueID ENENY_VOICE_ATTACK = 2025344636U;
+            } // namespace SWITCH
+        } // namespace ENEMY_VOICE
+
+    } // namespace SWITCHES
 
     namespace BANKS
     {
