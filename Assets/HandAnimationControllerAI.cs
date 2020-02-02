@@ -38,11 +38,11 @@ public class HandAnimationControllerAI : MonoBehaviour
         if(Input.GetAxis("VRTK_Axis11_LeftGrip") >= 0.01f)
         {
                  Debug.Log("l grab");
-                 AnimateGrab(true);
+                 //AnimateGrab(true);
         }
         else
         {
-                AnimateGrab(false);
+                //AnimateGrab(false);
         }
 
         if(Input.GetAxis("VRTK_Axis9_LeftTrigger") >= 0.01f)
@@ -55,7 +55,7 @@ public class HandAnimationControllerAI : MonoBehaviour
     void AnimateGrab(bool DoGrab)
     {
      
-            if (!_anim.GetBool("Grab"))
+           // if (!_anim.GetBool("Grab"))
             {
                 _anim.SetBool("Grab", DoGrab);
             }
