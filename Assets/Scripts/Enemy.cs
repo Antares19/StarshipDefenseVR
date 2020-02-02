@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
+    /*
 
     Node moveNode = null;
     Node oldNode = null;
@@ -76,5 +76,8 @@ public class Enemy : MonoBehaviour
             }
 
         }
-    }
+    }*/
+
+
+
 }

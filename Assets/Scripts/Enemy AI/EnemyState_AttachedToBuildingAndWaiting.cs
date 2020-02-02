@@ -9,15 +9,15 @@ public class EnemyState_AttachedToBuildingAndWaiting : EnemyState
         var building = enemy.BuildingAttachedTo;
         if (enemyAI.Buildings[building].DependentEnemies.Count >= building.NumberOfEnemiesNeededToCarry)
         {
-            enemyAI.Buildings[building].IsBeingCarried = true;
+            //определяем точку назначения и несём
+            //enemyAI.Buildings[building].StartCarryingToTarget
             enemyAI.State_CarryingBuilding.OnStateEnter(enemy, enemyAI);            
         }
     }
 
     public override void OnStateEnter(EnemyData enemy, EnemyAI enemyAI)
     {
-        //стопаем челика
-        var building = enemy.CurrentTarget.GetComponent<Building>();
+        var building = enemy.TargetWaypoint.GetComponent<Building>();
         AttachToBuilding(enemy, building);
 
         enemy.Animator.SetBool("Grab", true);
@@ -29,7 +29,7 @@ public class EnemyState_AttachedToBuildingAndWaiting : EnemyState
     {
         enemy.BuildingAttachedTo = building;
         enemy.Transform.parent = building.transform;
-        enemy.CurrentTarget = null;
+        enemy.TargetWaypoint = null;
     }
 
 

@@ -13,16 +13,16 @@ public class SpawnerManager : MonoBehaviour
 
     private Pool<Enemy> _enemyPool;
 
-    public event Action<Enemy> OnEnemySpawn = delegate { };
+    //Заспавнившийся враг и ближайший к нему узел пути.
+    public event Action<Enemy, GameObject> OnEnemySpawn = delegate { };
 
-    // Start is called before the first frame update
+    
     private void Start()
     {
         _enemyPool = new Pool<Enemy>(_prefab, _enemiesMaxCount, transform);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         float deltaTime = Time.deltaTime;
         for (int i = 0; i < _spawners.Length; i++)
@@ -30,25 +30,33 @@ public class SpawnerManager : MonoBehaviour
             _spawners[i].TimeToActive -= deltaTime;
 
             if (_spawners[i].TimeToActive <= 0 )
-            {
-                Spawn(_spawners[i].transform.position,_spawners[i].GetComponent<Spawner>().ClosestNode.GetComponent<Node>());
+            {                
+                Spawn(_spawners[i].transform.position,_spawners[i].GetComponent<Spawner>().ClosestNode);
                 _spawners[i].TimeToActive = _spawners[i].TimeToSpawn;
             }
         }
     }
 
-    private void Spawn(Vector3 spawnPosition,Node nextNode)
+    private void Spawn(Vector3 spawnPosition,GameObject nextNode)
     {
+        
         Enemy enemy = _enemyPool.GetObjectFromPool();
         if (enemy == null)
+        {
             return;
+        }
+        
 
         enemy.transform.position = new Vector3(RandomizeCoordinate(spawnPosition.x), spawnPosition.y, RandomizeCoordinate(spawnPosition.z));
-        enemy.GetComponent<MeshRenderer>().enabled = true;
+        var meshRenderers = enemy.GetComponentsInChildren<MeshRenderer>();
+        foreach (var renderer in meshRenderers)
+        {
+            renderer.enabled = true;
+        }
 
-        enemy.setMoveNode(nextNode);
-
-        OnEnemySpawn.Invoke(enemy);
+        //enemy.setMoveNode(nextNode);
+        
+        OnEnemySpawn.Invoke(enemy, nextNode);
     }
 
     private float RandomizeCoordinate(float coordinate)

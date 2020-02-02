@@ -19,9 +19,16 @@ public class Pool<T> where T: MonoBehaviour
         for (int i = 0; i < initialPoolSize; i++)
         {
             GameObject obj = InstantiatePrefab();
-            obj.GetComponent<MeshRenderer>().enabled = false;
+            var meshRenderers = obj.GetComponentsInChildren<MeshRenderer>();
+            foreach (var renderer in meshRenderers)
+            {
+                
+                renderer.enabled = false;
+            }
             _pool.Enqueue(obj.GetComponent<T>());
         }
+
+
     }
 
     private GameObject InstantiatePrefab()
