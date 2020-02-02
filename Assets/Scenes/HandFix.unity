@@ -456,6 +456,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1513720922731669819, guid: f8e0d2a59209d854b91b04b5db7df9ca,
+        type: 3}
+      propertyPath: m_TagString
+      value: GameController
+      objectReference: {fileID: 0}
     - target: {fileID: 1936771957171369451, guid: f8e0d2a59209d854b91b04b5db7df9ca,
         type: 3}
       propertyPath: m_Layer
@@ -39600,8 +39605,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482513052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.258, z: 1.5}
-  m_LocalScale: {x: 2.770516, y: 2.770516, z: 2.770516}
+  m_LocalPosition: {x: 0, y: 1.258, z: 1.07}
+  m_LocalScale: {x: 2.770516, y: 2.770516, z: 7.94}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -53859,7 +53864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _housePivot: {fileID: 1482237989}
-  _sessionTime: 120
+  _sessionTime: 180
 --- !u!4 &1942862293
 Transform:
   m_ObjectHideFlags: 0
@@ -57180,6 +57185,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123612007557414211, guid: 18f19fe085e244355bad72183c86cf30,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123612007557414211, guid: 18f19fe085e244355bad72183c86cf30,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123612007557414211, guid: 18f19fe085e244355bad72183c86cf30,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18f19fe085e244355bad72183c86cf30, type: 3}

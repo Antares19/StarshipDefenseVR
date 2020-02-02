@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class VRButton : MonoBehaviour
 {
@@ -18,6 +19,12 @@ public class VRButton : MonoBehaviour
             {
                 lastPressed = Time.realtimeSinceStartup;
                 OnPress.Invoke();
+                //Debug.Log("Button WOrks");
+                
+                
+
+                Scene thisScene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(thisScene.name);
             }
         }
     }
