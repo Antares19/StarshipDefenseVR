@@ -63,7 +63,7 @@ public class EnemyAI : MonoBehaviour
         DeltaTime = Time.deltaTime;
 
         UpdateEnemies();
-        CarryBuildings();
+        //CarryBuildings();
     }
 
     private void UpdateEnemies()
@@ -94,15 +94,8 @@ public class EnemyAI : MonoBehaviour
 
     public void FindNewTargetNodeForEnemy(EnemyData enemy)
     {
-        var target = enemy.TargetWaypoint.GetComponent<Node>().getRandomPlayerPath().gameObject;
+        enemy.TargetWaypoint = enemy.TargetWaypoint.GetComponent<Node>().getRandomPlayerPath().gameObject;
 
-        var targetBuilding = target.GetComponent<Building>();
-        if (targetBuilding != null)
-        {
-            enemy.TargetBuilding = target;
-        }
-        else
-            enemy.TargetWaypoint = target;
     }
 
     public void TurnEnemyToFaceTarget(EnemyData enemy)
@@ -158,7 +151,7 @@ public class EnemyData
     public Transform Transform;
     public Rigidbody RigidBody;
     public GameObject TargetWaypoint;
-    public GameObject TargetBuilding;
+    public Building TargetBuilding;
     public Building BuildingAttachedTo;
     public Animator Animator;
 

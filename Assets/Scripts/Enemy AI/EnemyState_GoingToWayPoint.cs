@@ -14,20 +14,23 @@ public class EnemyState_GoingToWayPoint : EnemyState
             return;
 
         //ВЫБИРАЕМ СЛЕДУЮЩУЮ ТОЧКУ НАЗНАЧЕНИЯ.
-        enemyAI.FindNewTargetNodeForEnemy(enemy);
-        enemyAI.TurnEnemyToFaceTarget(enemy);
-
-        //ЕСЛИ ЭТО ДОМ, то
-        if (enemy.TargetBuilding != null)
+        if (Random.Range(0,2) == 0)
         {
+            //building
+            enemy.TargetBuilding = enemy.TargetWaypoint.GetComponent<Node>().getRandomBuildingPath();
             enemyAI.State_GoingToBuilding.OnStateEnter(enemy, enemyAI);
         }
-
-
+        else
+        {
+            enemyAI.FindNewTargetNodeForEnemy(enemy);
+            enemyAI.TurnEnemyToFaceTarget(enemy);
+        }
+        
     }
 
     public override void OnStateEnter(EnemyData enemy, EnemyAI enemyAI)
     {
+        Debug.Log("пошел к вейпоинту");
         enemyAI.TurnEnemyToFaceTarget(enemy);
 
         enemy.Animator.SetBool("Walk", true);
