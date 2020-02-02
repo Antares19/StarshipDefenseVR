@@ -20,6 +20,8 @@ public class EnemyState_GoingToBuilding : EnemyState
             enemy.TargetBuilding = null;
 
             enemyAI.State_GoingToWaypoint.OnStateEnter(enemy, enemyAI);
+
+            return;
         }
 
         //Если дошел до дома, то меняем стейт на enemyAI.State_WaitingAtBuilding
