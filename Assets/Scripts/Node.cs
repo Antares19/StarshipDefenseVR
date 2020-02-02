@@ -55,6 +55,7 @@ public class Node : MonoBehaviour
     [SerializeField] private List<GameObject> _nodesToHome;
 
     [SerializeField] private List<GameObject> _nodesToPlayer;
+    [SerializeField] private List<GameObject> _buildings;
     [SerializeField] private bool isHome;
     //[SerializeField] private int _closestHouses;
     //[SerializeField] private 
@@ -63,7 +64,8 @@ public class Node : MonoBehaviour
 
     private Transform[] nodesToHomeTransform;
     private Transform[] nodesToPlayerTransform;
-    
+    private Transform[] buildingsTransform;
+
 
 
     public Node getRandomHomePath()
@@ -74,6 +76,11 @@ public class Node : MonoBehaviour
     public Node getRandomPlayerPath()
     {
         return _nodesToPlayer[UnityEngine.Random.Range(0, _nodesToPlayer.Count)].GetComponent<Node>();
+    }
+
+    public NodeBuilding getRandomBuildingPath()
+    {
+        return _buildings[UnityEngine.Random.Range(0, _buildings.Count)].GetComponent<NodeBuilding>();
     }
     // Start is called before the first frame update
     void Start()
@@ -90,6 +97,22 @@ public class Node : MonoBehaviour
             nodesToPlayerTransform[i] = _nodesToPlayer[i].transform;
 
 
+
+
+        _buildings = new List<GameObject>();
+
+        foreach (Transform child in GameObject.Find("Buildings_Group").transform)
+            _buildings.Add(child.gameObject);
+
+        _buildings.Sort(delegate (GameObject a, GameObject b)
+        {
+            return Vector2.Distance(this.transform.position, a.transform.position)
+            .CompareTo(
+              Vector2.Distance(this.transform.position, b.transform.position));
+        });
+
+
+        _buildings.RemoveRange(2, _buildings.Count - 2);
 
         /*
         nodesToPlayerTransform = new Transform[3];

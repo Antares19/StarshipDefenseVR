@@ -7,12 +7,32 @@ public class Enemy : MonoBehaviour
 
 
     Node moveNode = null;
+    Node oldNode = null;
+
+    NodeBuilding moveBuilding = null; 
+
+
+    
     public void setMoveNode(Node node)
     {
-        Debug.Log(node.ToString());
         moveNode = node;
+        moveBuilding = null;
     }
 
+
+    public void setMoveBuilding(NodeBuilding building)
+    {
+        oldNode = moveNode;
+        moveNode = null;
+        moveBuilding = building;
+
+    }
+
+
+    public void pickBuilding()
+    {
+
+    }
 
     double speed = 5*0.06;
 
@@ -26,9 +46,34 @@ public class Enemy : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, moveNode.transform.position, (float)step);
             if (Vector3.Distance(transform.position, moveNode.transform.position) < 0.01f)
             {
-                setMoveNode(moveNode.getRandomPlayerPath());
+
+                if (UnityEngine.Random.Range(0,3)>1)
+                {
+                    NodeBuilding b = moveNode.getRandomBuildingPath();
+
+                    if (b.OnBase())
+                    {
+                        setMoveBuilding(b);
+                    }
+                }
+                else
+                {
+                    setMoveNode(moveNode.getRandomPlayerPath());
+                }
+                
             }
         }
+
+
+        if (moveBuilding != null)
+        {
+            double step = speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, moveBuilding.transform.position, (float)step);
+
+            if (Vector3.Distance(transform.position, moveBuilding.transform.position) < 0.05f)
+            {
+                pickBuilding();
+            }   
             
     }
 }
