@@ -73,7 +73,8 @@ public class Enemy : MonoBehaviour
             if (Vector3.Distance(transform.position, moveBuilding.transform.position) < 0.05f)
             {
                 pickBuilding();
-            }   
-            
+            }
+
+        }
     }
 }
