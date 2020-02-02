@@ -94,23 +94,31 @@ public class EnemyAI : MonoBehaviour
 
     public void FindNewTargetNodeForEnemy(EnemyData enemy)
     {
-        enemy.CurrentTarget = enemy.CurrentTarget.GetComponent<Node>().getRandomPlayerPath().gameObject;
+        var target = enemy.TargetWaypoint.GetComponent<Node>().getRandomPlayerPath().gameObject;
+
+        var targetBuilding = target.GetComponent<Building>();
+        if (targetBuilding != null)
+        {
+            enemy.TargetBuilding = target;
+        }
+        else
+            enemy.TargetWaypoint = target;
     }
 
     public void TurnEnemyToFaceTarget(EnemyData enemy)
     {
         enemy.Transform.LookAt(new Vector3
             (
-                enemy.CurrentTarget.transform.position.x,
+                enemy.TargetWaypoint.transform.position.x,
                 enemy.Transform.position.y,
-                enemy.CurrentTarget.transform.position.z
+                enemy.TargetWaypoint.transform.position.z
             ));
     }
 
     private void AddEnemyToActiveEnemiesList(Enemy enemyMono, GameObject closestNode)
     {
         _activeEnemies.Add(enemyMono, new EnemyData(enemyMono));
-        _activeEnemies[enemyMono].CurrentTarget = closestNode;
+        _activeEnemies[enemyMono].TargetWaypoint = closestNode;
         State_GoingToWaypoint.OnStateEnter(_activeEnemies[enemyMono], this);
     }
 
@@ -149,7 +157,8 @@ public class EnemyData
     public Enemy EnemyMono;
     public Transform Transform;
     public Rigidbody RigidBody;
-    public GameObject CurrentTarget;
+    public GameObject TargetWaypoint;
+    public GameObject TargetBuilding;
     public Building BuildingAttachedTo;
     public Animator Animator;
 

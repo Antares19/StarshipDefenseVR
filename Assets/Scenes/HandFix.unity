@@ -17836,6 +17836,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2828096898330657068}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &588204951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7043887968131551730, guid: e318c0518f9b4344183e19fb39a120f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1027061119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &588204956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588204951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19cc193b5867c724d85fea83997a5f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numberOfEnemiesNeededToCarry: 0
 --- !u!4 &588665565 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6933011019246399962, guid: 91c2aa6c906386944aa36465b8c9d1ee,
@@ -27650,7 +27669,7 @@ GameObject:
   - component: {fileID: 1009859898}
   - component: {fileID: 1009859899}
   m_Layer: 0
-  m_Name: EnemiAI
+  m_Name: EnemyAI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32375,6 +32394,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1245483922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7043887968131551730, guid: e318c0518f9b4344183e19fb39a120f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610768274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1245483927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245483922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19cc193b5867c724d85fea83997a5f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numberOfEnemiesNeededToCarry: 1
 --- !u!1 &1246797219
 GameObject:
   m_ObjectHideFlags: 0
@@ -38209,6 +38247,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446776353}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1449631409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7043887968131551730, guid: e318c0518f9b4344183e19fb39a120f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7290291505137066579}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1449631414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449631409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19cc193b5867c724d85fea83997a5f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numberOfEnemiesNeededToCarry: 0
 --- !u!1001 &1451471036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43851,7 +43908,7 @@ PrefabInstance:
     - target: {fileID: 7290291506229079330, guid: e318c0518f9b4344183e19fb39a120f9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1556
+      value: -0.264
       objectReference: {fileID: 0}
     - target: {fileID: 7290291506229079330, guid: e318c0518f9b4344183e19fb39a120f9,
         type: 3}

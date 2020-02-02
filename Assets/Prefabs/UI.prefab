@@ -265,6 +265,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: {fileID: 1946538709568616061}
   TimeLeft: {fileID: 1946538709030820147}
+  PlayingTransform: {fileID: 0}
+  PauseTransform: {fileID: 0}
+  TransitionDuration: 0.16
+  isPlaying: 1
+  kPlaying: 1
 --- !u!1 &727178878642970133
 GameObject:
   m_ObjectHideFlags: 0
