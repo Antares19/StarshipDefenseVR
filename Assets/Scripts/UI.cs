@@ -8,6 +8,12 @@ public class UI : MonoBehaviour
     public TextMesh Score;
     public TextMesh TimeLeft;
 
+    public Transform GameOverContainer;
+    public Transform RestartButtonContainer;
+
+    public Transform TimeLeftLabelContainer;
+    public Transform TimeLeftValueContainer;
+
     public Transform PlayingTransform;
     public Transform PauseTransform;
 
@@ -16,7 +22,11 @@ public class UI : MonoBehaviour
     [SerializeField]
     private bool isPlaying = true;
     [SerializeField]
+    private bool isOver = false;
+    [SerializeField]
     private float kPlaying = 1;
+    [SerializeField]
+    private float kOver = 0;
 
     public void SetState(string scoreString, float secondsLeft)
     {
@@ -25,9 +35,10 @@ public class UI : MonoBehaviour
         int iSecondsLeft = (int)secondsLeft;
         TimeLeft.text = (iSecondsLeft / 60) + ":" + (iSecondsLeft % 60).ToString("00");
     }
-    public void SetPlaying(bool value)
+    public void SetPlaying(bool isPlaying, bool gameOver)
     {
-        isPlaying = value;
+        this.isPlaying = isPlaying;
+        this.isOver = gameOver;
     }
 
     void Update()
@@ -35,6 +46,7 @@ public class UI : MonoBehaviour
         float transitionSpeed = 1 / TransitionDuration;
         float maxDelta = Time.unscaledDeltaTime * transitionSpeed;
 
+        // Play/Pause Transition
         float targetK = isPlaying ? 1 : 0;
         if (Mathf.Abs(targetK - kPlaying) <= maxDelta)
         {
@@ -53,7 +65,25 @@ public class UI : MonoBehaviour
             Vector3.Lerp(PauseTransform.up, PlayingTransform.up, k)
         );
         transform.position = Vector3.Lerp(PauseTransform.position, PlayingTransform.position, k);
-        
+
+        // GameOver or not transition
+        float targetKOver = isOver ? 1 : 0;
+
+        if (Mathf.Abs(targetKOver - kOver) <= maxDelta)
+        {
+            kOver = targetKOver;
+        }
+        else
+        {
+            kOver += Mathf.Sign(targetKOver - kOver) * maxDelta;
+        }
+
+        GameOverContainer.transform.localScale = new Vector3(1, kOver, 1);
+        RestartButtonContainer.transform.localScale = new Vector3(1, kOver, 1);
+        RestartButtonContainer.gameObject.SetActive(kOver != 0);
+
+        TimeLeftLabelContainer.transform.localScale = new Vector3(1, 1 - kOver, 1);
+        TimeLeftValueContainer.transform.localScale = new Vector3(1, 1 - kOver, 1);
     }
 
     void Start()
