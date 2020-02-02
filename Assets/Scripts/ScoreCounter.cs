@@ -43,7 +43,8 @@ namespace Ar
             }
             else
             {
-               
+                _ui.SetState(string.Format("{0} / {1}", currentHouses, totalHouses), 0);
+                _ui.SetPlaying(false, true);
             }
 
             
