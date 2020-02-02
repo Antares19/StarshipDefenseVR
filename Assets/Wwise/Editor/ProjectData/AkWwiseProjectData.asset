@@ -31,7 +31,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: e7405ca61903c34fbaa59ff50ebde773
     GuidInternal: 
-    m_lastTime: -8586210322542231742
+    m_lastTime: -8586209654917621679
     List:
     - name: Main
       guid: e31e7ed099d082478a05d55781bb34a8
@@ -47,8 +47,22 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: fe3bafed2c4c9742a74e321ab37fe770
     GuidInternal: 
-    m_lastTime: -8586210322687728143
+    m_lastTime: -8586209658867119329
     List:
+    - name: amb_river
+      guid: 4ac23b6cdce6074081e8394be31455b1
+      id: 45729008
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 4
+      - ElementName: amb_river
+        ObjectType: 3
+      Path: Default Work Unit\Ambient\amb_river
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: amb_wind_dark
       guid: 0a59c321b1645244b00644c4e81dfbde
       id: 225337123
@@ -60,6 +74,20 @@ MonoBehaviour:
       - ElementName: amb_wind_dark
         ObjectType: 3
       Path: Default Work Unit\Ambient\amb_wind_dark
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: bild_set
+      guid: 069a70126e9d9b478c5443bde8d73405
+      id: 745020111
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: bild_set
+        ObjectType: 3
+      Path: Default Work Unit\Player\bild_set
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

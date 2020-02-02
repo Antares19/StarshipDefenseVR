@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID AMB_RIVER = 45729008U;
         static const AkUniqueID AMB_WIND_DARK = 225337123U;
         static const AkUniqueID BREAK_BUILDING = 2146637009U;
         static const AkUniqueID ENEMY_FOOTSTEPS = 3217092839U;
