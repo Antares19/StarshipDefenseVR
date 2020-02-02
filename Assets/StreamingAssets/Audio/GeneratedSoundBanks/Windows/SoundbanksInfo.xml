@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>C:\Users\A\Documents\GitHub\StarshipDefenseVR\StarshipDefenseVR_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\A\Documents\GitHub\StarshipDefenseVR\StarshipDefenseVR_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\A\Documents\GitHub\StarshipDefenseVR\StarshipDefenseVR_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\A\Documents\GitHub\StarshipDefenseVR\StarshipDefenseVR_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="45729008" Name="amb_river" ObjectPath="\Events\Default Work Unit\Ambient\amb_river" MaxAttenuation="100.000000" DurationType="Infinite"/>
+				<Event Id="225337123" Name="amb_wind_dark" ObjectPath="\Events\Default Work Unit\Ambient\amb_wind_dark" DurationType="Infinite"/>
+				<Event Id="2146637009" Name="break_building" ObjectPath="\Events\Default Work Unit\Destukction\break_building" DurationType="OneShot" DurationMin="2.238542" DurationMax="2.912844"/>
+				<Event Id="3217092839" Name="enemy_footsteps" ObjectPath="\Events\Default Work Unit\Enemy\enemy_footsteps" DurationType="Infinite"/>
+				<Event Id="3232182425" Name="enemy_switch_attack" ObjectPath="\Events\Default Work Unit\Enemy\enemy_switch_attack" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3274687119" Name="enemy_switch_fear" ObjectPath="\Events\Default Work Unit\Enemy\enemy_switch_fear" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="390963704" Name="enemy_voice" ObjectPath="\Events\Default Work Unit\Enemy\enemy_voice" MaxAttenuation="100.000000" DurationType="Infinite"/>
+				<Event Id="1417826751" Name="fire_loop_start" ObjectPath="\Events\Default Work Unit\Destukction\fire_loop_start" MaxAttenuation="100.000000" DurationType="Infinite"/>
+				<Event Id="139049024" Name="Play_amb_bird" ObjectPath="\Events\Default Work Unit\Ambient\Play_amb_bird" DurationType="Infinite"/>
+				<Event Id="1058868581" Name="quenching" ObjectPath="\Events\Default Work Unit\Destukction\quenching" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="4.494361" DurationMax="6.288253"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="4275787" Language="SFX">
+					<ShortName>QP12 1482 Canyons day birds muted wind gusty debris.wav</ShortName>
+					<Path>SFX\QP12 1482 Canyons day birds muted wind gusty debris_D870A295.wem</Path>
+				</File>
+				<File Id="28553744" Language="SFX">
+					<ShortName>QP04 0349 Stream small sparkling.wav</ShortName>
+					<Path>SFX\QP04 0349 Stream small sparkling_EEBA9B23.wem</Path>
+				</File>
+				<File Id="34424271" Language="SFX">
+					<ShortName>quenching_04.wav</ShortName>
+					<Path>SFX\quenching_04_61F5F1FB.wem</Path>
+				</File>
+				<File Id="47409754" Language="SFX">
+					<ShortName>enemy_voice_23.wav</ShortName>
+					<Path>SFX\enemy_voice_23_E5527282.wem</Path>
+				</File>
+				<File Id="48251608" Language="SFX">
+					<ShortName>grass_footsteps_02_front_R.wav</ShortName>
+					<Path>SFX\grass_footsteps_02_front_R_8EE21B35.wem</Path>
+				</File>
+				<File Id="52948205" Language="SFX">
+					<ShortName>enemy_voice_28.wav</ShortName>
+					<Path>SFX\enemy_voice_28_3080BFE1.wem</Path>
+				</File>
+				<File Id="58285561" Language="SFX">
+					<ShortName>grass_footsteps_01_back_L.wav</ShortName>
+					<Path>SFX\grass_footsteps_01_back_L_8EE21B35.wem</Path>
+				</File>
+				<File Id="67866414" Language="SFX">
+					<ShortName>grass_footsteps_01_back_R.wav</ShortName>
+					<Path>SFX\grass_footsteps_01_back_R_8EE21B35.wem</Path>
+				</File>
+				<File Id="127509606" Language="SFX">
+					<ShortName>enemy_voice_12.wav</ShortName>
+					<Path>SFX\enemy_voice_12_C1B12E1C.wem</Path>
+				</File>
+				<File Id="141312309" Language="SFX">
+					<ShortName>enemy_voice_30.wav</ShortName>
+					<Path>SFX\enemy_voice_30_B9F6362D.wem</Path>
+				</File>
+				<File Id="154316523" Language="SFX">
+					<ShortName>QP04 0349 Stream small sparkling.wav</ShortName>
+					<Path>SFX\QP04 0349 Stream small sparkling_20896AA3.wem</Path>
+				</File>
+				<File Id="170439205" Language="SFX">
+					<ShortName>enemy_voice_02.wav</ShortName>
+					<Path>SFX\enemy_voice_02_9B80E1A8.wem</Path>
+				</File>
+				<File Id="170968012" Language="SFX">
+					<ShortName>enemy_voice_07.wav</ShortName>
+					<Path>SFX\enemy_voice_07_88152FD8.wem</Path>
+				</File>
+				<File Id="180181017" Language="SFX">
+					<ShortName>CW095_Storm_Winds_Moaning_Cyclone.wav</ShortName>
+					<Path>SFX\CW095_Storm_Winds_Moaning_Cyclone_846B40C3.wem</Path>
+				</File>
+				<File Id="182822704" Language="SFX">
+					<ShortName>enemy_voice_18.wav</ShortName>
+					<Path>SFX\enemy_voice_18_A8856A49.wem</Path>
+				</File>
+				<File Id="186823962" Language="SFX">
+					<ShortName>fire_loop.wav</ShortName>
+					<Path>SFX\fire_loop_D8E7C12C.wem</Path>
+				</File>
+				<File Id="195649657" Language="SFX">
+					<ShortName>ESM_wah_deep_Sound_Vocal_Male_FX_Cartoon_Mobile_App.wav</ShortName>
+					<Path>SFX\ESM_wah_deep_Sound_Vocal_Male_FX_Cartoon_Mobile_App_8EE21B35.wem</Path>
+				</File>
+				<File Id="243945517" Language="SFX">
+					<ShortName>enemy_voice_19.wav</ShortName>
+					<Path>SFX\enemy_voice_19_43C93C33.wem</Path>
+				</File>
+				<File Id="276913159" Language="SFX">
+					<ShortName>enemy_voice_25.wav</ShortName>
+					<Path>SFX\enemy_voice_25_B59E9471.wem</Path>
+				</File>
+				<File Id="279447295" Language="SFX">
+					<ShortName>enemy_voice_03.wav</ShortName>
+					<Path>SFX\enemy_voice_03_082A4886.wem</Path>
+				</File>
+				<File Id="286535469" Language="SFX">
+					<ShortName>fire_loop.wav</ShortName>
+					<Path>SFX\fire_loop_3F54751C.wem</Path>
+				</File>
+				<File Id="288202254" Language="SFX">
+					<ShortName>bild_crack_04.wav</ShortName>
+					<Path>SFX\bild_crack_04_8EE21B35.wem</Path>
+				</File>
+				<File Id="297471504" Language="SFX">
+					<ShortName>enemy_voice_31.wav</ShortName>
+					<Path>SFX\enemy_voice_31_841A9F9D.wem</Path>
+				</File>
+				<File Id="337390320" Language="SFX">
+					<ShortName>grass_footsteps_02_back_R.wav</ShortName>
+					<Path>SFX\grass_footsteps_02_back_R_8EE21B35.wem</Path>
+				</File>
+				<File Id="353607373" Language="SFX">
+					<ShortName>fear_01 (3).wav</ShortName>
+					<Path>SFX\fear_01 (3)_B0FD70ED.wem</Path>
+				</File>
+				<File Id="390102915" Language="SFX">
+					<ShortName>enemy_voice_11.wav</ShortName>
+					<Path>SFX\enemy_voice_11_3E552162.wem</Path>
+				</File>
+				<File Id="410289736" Language="SFX">
+					<ShortName>QP04 0349 Stream small sparkling.wav</ShortName>
+					<Path>SFX\QP04 0349 Stream small sparkling_90ACF4A8.wem</Path>
+				</File>
+				<File Id="428097721" Language="SFX">
+					<ShortName>fear_01 (2).wav</ShortName>
+					<Path>SFX\fear_01 (2)_E4F842A6.wem</Path>
+				</File>
+				<File Id="450640100" Language="SFX">
+					<ShortName>grass_footsteps_02_back_L.wav</ShortName>
+					<Path>SFX\grass_footsteps_02_back_L_8EE21B35.wem</Path>
+				</File>
+				<File Id="464019483" Language="SFX">
+					<ShortName>enemy_voice_16.wav</ShortName>
+					<Path>SFX\enemy_voice_16_44073175.wem</Path>
+				</File>
+				<File Id="468714907" Language="SFX">
+					<ShortName>QP12 1482 Canyons day birds muted wind gusty debris.wav</ShortName>
+					<Path>SFX\QP12 1482 Canyons day birds muted wind gusty debris_7099E1B3.wem</Path>
+				</File>
+				<File Id="487858758" Language="SFX">
+					<ShortName>bild_crack_02.wav</ShortName>
+					<Path>SFX\bild_crack_02_8EE21B35.wem</Path>
+				</File>
+				<File Id="535985737" Language="SFX">
+					<ShortName>quenching_02.wav</ShortName>
+					<Path>SFX\quenching_02_79390F2D.wem</Path>
+				</File>
+				<File Id="551849273" Language="SFX">
+					<ShortName>enemy_voice_09.wav</ShortName>
+					<Path>SFX\enemy_voice_09_9EDF68E0.wem</Path>
+				</File>
+				<File Id="553164470" Language="SFX">
+					<ShortName>enemy_voice_24.wav</ShortName>
+					<Path>SFX\enemy_voice_24_83010C72.wem</Path>
+				</File>
+				<File Id="553509468" Language="SFX">
+					<ShortName>enemy_voice_06.wav</ShortName>
+					<Path>SFX\enemy_voice_06_D5BDE67D.wem</Path>
+				</File>
+				<File Id="569238331" Language="SFX">
+					<ShortName>QP12 1482 Canyons day birds muted wind gusty debris.wav</ShortName>
+					<Path>SFX\QP12 1482 Canyons day birds muted wind gusty debris_616E6F61.wem</Path>
+				</File>
+				<File Id="581371029" Language="SFX">
+					<ShortName>grass_footsteps_01_front_L.wav</ShortName>
+					<Path>SFX\grass_footsteps_01_front_L_8EE21B35.wem</Path>
+				</File>
+				<File Id="582175341" Language="SFX">
+					<ShortName>QP04 0349 Stream small sparkling.wav</ShortName>
+					<Path>SFX\QP04 0349 Stream small sparkling_02F3CE3F.wem</Path>
+				</File>
+				<File Id="585308589" Language="SFX">
+					<ShortName>enemy_voice_01.wav</ShortName>
+					<Path>SFX\enemy_voice_01_0AEEA427.wem</Path>
+				</File>
+				<File Id="585388847" Language="SFX">
+					<ShortName>enemy_voice_21.wav</ShortName>
+					<Path>SFX\enemy_voice_21_F032CD62.wem</Path>
+				</File>
+				<File Id="586969603" Language="SFX">
+					<ShortName>enemy_voice_05.wav</ShortName>
+					<Path>SFX\enemy_voice_05_1F617B88.wem</Path>
+				</File>
+				<File Id="593225110" Language="SFX">
+					<ShortName>enemy_voice_14.wav</ShortName>
+					<Path>SFX\enemy_voice_14_1A441CFE.wem</Path>
+				</File>
+				<File Id="610438684" Language="SFX">
+					<ShortName>enemy_voice_20.wav</ShortName>
+					<Path>SFX\enemy_voice_20_70481A41.wem</Path>
+				</File>
+				<File Id="623292417" Language="SFX">
+					<ShortName>ESM_who_yeah_long_Sound_Vocal_Male_FX_Cartoon_Mobile_App.wav</ShortName>
+					<Path>SFX\ESM_who_yeah_long_Sound_Vocal_Male_FX_Cartoon_Mobile_App_B5824991.wem</Path>
+				</File>
+				<File Id="640683088" Language="SFX">
+					<ShortName>ESM_Waaa_Whoo_Sound_Vocal_Male_FX_Cartoon_Mobile_App.wav</ShortName>
+					<Path>SFX\ESM_Waaa_Whoo_Sound_Vocal_Male_FX_Cartoon_Mobile_App_D36C63A4.wem</Path>
+				</File>
+				<File Id="654191478" Language="SFX">
+					<ShortName>enemy_voice_29.wav</ShortName>
+					<Path>SFX\enemy_voice_29_37E98014.wem</Path>
+				</File>
+				<File Id="673609427" Language="SFX">
+					<ShortName>enemy_voice_27.wav</ShortName>
+					<Path>SFX\enemy_voice_27_5DE10BE8.wem</Path>
+				</File>
+				<File Id="677117193" Language="SFX">
+					<ShortName>QP12 1482 Canyons day birds muted wind gusty debris.wav</ShortName>
+					<Path>SFX\QP12 1482 Canyons day birds muted wind gusty debris_B12A2CA9.wem</Path>
+				</File>
+				<File Id="679789620" Language="SFX">
+					<ShortName>CW095_Storm_Winds_Moaning_Cyclone.wav</ShortName>
+					<Path>SFX\CW095_Storm_Winds_Moaning_Cyclone_8C60370D.wem</Path>
+				</File>
+				<File Id="684884713" Language="SFX">
+					<ShortName>enemy_voice_10.wav</ShortName>
+					<Path>SFX\enemy_voice_10_D40F6EF1.wem</Path>
+				</File>
+				<File Id="696503497" Language="SFX">
+					<ShortName>bild_crack_01.wav</ShortName>
+					<Path>SFX\bild_crack_01_8EE21B35.wem</Path>
+				</File>
+				<File Id="703919715" Language="SFX">
+					<ShortName>enemy_voice_08.wav</ShortName>
+					<Path>SFX\enemy_voice_08_9826E4C9.wem</Path>
+				</File>
+				<File Id="712446171" Language="SFX">
+					<ShortName>enemy_voice_26.wav</ShortName>
+					<Path>SFX\enemy_voice_26_30A75900.wem</Path>
+				</File>
+				<File Id="712958609" Language="SFX">
+					<ShortName>CW095_Storm_Winds_Moaning_Cyclone.wav</ShortName>
+					<Path>SFX\CW095_Storm_Winds_Moaning_Cyclone_7825645A.wem</Path>
+				</File>
+				<File Id="722093199" Language="SFX">
+					<ShortName>enemy_voice_13.wav</ShortName>
+					<Path>SFX\enemy_voice_13_8896ECED.wem</Path>
+				</File>
+				<File Id="736857405" Language="SFX">
+					<ShortName>grass_footsteps_02_front_L.wav</ShortName>
+					<Path>SFX\grass_footsteps_02_front_L_8EE21B35.wem</Path>
+				</File>
+				<File Id="795392924" Language="SFX">
+					<ShortName>enemy_voice_17.wav</ShortName>
+					<Path>SFX\enemy_voice_17_226D955E.wem</Path>
+				</File>
+				<File Id="813970484" Language="SFX">
+					<ShortName>quenching_03.wav</ShortName>
+					<Path>SFX\quenching_03_3DA32638.wem</Path>
+				</File>
+				<File Id="821877593" Language="SFX">
+					<ShortName>bild_crack_03.wav</ShortName>
+					<Path>SFX\bild_crack_03_8EE21B35.wem</Path>
+				</File>
+				<File Id="907056553" Language="SFX">
+					<ShortName>CW095_Storm_Winds_Moaning_Cyclone.wav</ShortName>
+					<Path>SFX\CW095_Storm_Winds_Moaning_Cyclone_EB2D27A9.wem</Path>
+				</File>
+				<File Id="933344275" Language="SFX">
+					<ShortName>enemy_voice_15.wav</ShortName>
+					<Path>SFX\enemy_voice_15_3AB6E418.wem</Path>
+				</File>
+				<File Id="943163777" Language="SFX">
+					<ShortName>fire_loop.wav</ShortName>
+					<Path>SFX\fire_loop_AC3148F9.wem</Path>
+				</File>
+				<File Id="979019389" Language="SFX">
+					<ShortName>quenching_01.wav</ShortName>
+					<Path>SFX\quenching_01_ED01C8D1.wem</Path>
+				</File>
+				<File Id="988224346" Language="SFX">
+					<ShortName>enemy_voice_04.wav</ShortName>
+					<Path>SFX\enemy_voice_04_F22B2E78.wem</Path>
+				</File>
+				<File Id="998708638" Language="SFX">
+					<ShortName>grass_footsteps_01_front_R.wav</ShortName>
+					<Path>SFX\grass_footsteps_01_front_R_8EE21B35.wem</Path>
+				</File>
+				<File Id="1030423862" Language="SFX">
+					<ShortName>enemy_voice_22.wav</ShortName>
+					<Path>SFX\enemy_voice_22_2D5FD1D4.wem</Path>
+				</File>
+				<File Id="1038210454" Language="SFX">
+					<ShortName>fire_loop.wav</ShortName>
+					<Path>SFX\fire_loop_864CF113.wem</Path>
+				</File>
+				<File Id="1054668057" Language="SFX">
+					<ShortName>fear_01 (1).wav</ShortName>
+					<Path>SFX\fear_01 (1)_14001787.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
