@@ -80,7 +80,11 @@ public class Node : MonoBehaviour
 
     public Building getRandomBuildingPath()
     {
+        Debug.Log("BUILDINGPATH_CHECK");
         return _buildings[UnityEngine.Random.Range(0, _buildings.Count)].GetComponent<Building>();
+
+
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -101,10 +105,20 @@ public class Node : MonoBehaviour
 
         _buildings = new List<GameObject>();
 
-        foreach (Transform child in GameObject.Find("Buildings_Group").transform)
-            _buildings.Add(child.gameObject);
+        //foreach (Transform child in GameObject.Find("Buildings_Group").transform)
+        //    _buildings.Add(child.gameObject);
 
-        _buildings.Sort(delegate (GameObject a, GameObject b)
+
+        //_buildings = new List<GameObject>();
+        //foreach (Building b in GameObject.Find("EnemyAI").GetComponent<EnemyAI>().Buildings.Keys)
+        //   _buildings.Add(b.gameObject);
+
+        //_buildings.Add(GameObject.FindObjectOfType<Building>().gameObject);
+
+        foreach (Building t in GameObject.FindObjectsOfType<Building>())
+               _buildings.Add(t.gameObject);
+
+            _buildings.Sort(delegate (GameObject a, GameObject b)
         {
             return Vector2.Distance(this.transform.position, a.transform.position)
             .CompareTo(
