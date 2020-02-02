@@ -18,6 +18,7 @@ public class LostHomeTest : MonoBehaviour
             pos.z = 0.5f;
             home.transform.localPosition = pos;
             Messenger.Broadcast(HomeEvent.lostHome);
+            //Messenger.Broadcast(HomeEvent.receiveHome);
 
         }
     }

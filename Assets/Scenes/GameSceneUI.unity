@@ -45333,6 +45333,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 5779825891189464642, guid: 18f19fe085e244355bad72183c86cf30,
+        type: 3}
+      propertyPath: m_Name
+      value: VRButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18f19fe085e244355bad72183c86cf30, type: 3}
 --- !u!4 &2028590052803768391 stripped
