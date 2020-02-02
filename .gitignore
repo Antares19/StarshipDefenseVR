@@ -29,3 +29,7 @@ ExportedObj/
 # Builds
 *.apk
 *.unitypackage
+
+# Blender backup files
+*.blend1
+*.blend1.meta
