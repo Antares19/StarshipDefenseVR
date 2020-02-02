@@ -31,13 +31,13 @@ public class SpawnerManager : MonoBehaviour
 
             if (_spawners[i].TimeToActive <= 0 )
             {
-                Spawn(_spawners[i].transform.position);
+                Spawn(_spawners[i].transform.position,_spawners[i].GetComponent<Spawner>().ClosestNode.GetComponent<Node>());
                 _spawners[i].TimeToActive = _spawners[i].TimeToSpawn;
             }
         }
     }
 
-    private void Spawn(Vector3 spawnPosition)
+    private void Spawn(Vector3 spawnPosition,Node nextNode)
     {
         Enemy enemy = _enemyPool.GetObjectFromPool();
         if (enemy == null)
@@ -45,6 +45,8 @@ public class SpawnerManager : MonoBehaviour
 
         enemy.transform.position = new Vector3(RandomizeCoordinate(spawnPosition.x), spawnPosition.y, RandomizeCoordinate(spawnPosition.z));
         enemy.GetComponent<MeshRenderer>().enabled = true;
+
+        enemy.setMoveNode(nextNode);
 
         OnEnemySpawn.Invoke(enemy);
     }
