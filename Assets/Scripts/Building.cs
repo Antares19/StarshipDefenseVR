@@ -13,4 +13,22 @@ public class Building : MonoBehaviour
     {
         OnPlayerGrabbedBuilding.Invoke(this);
     }
+
+    public bool isOnFire()
+    {
+        return onFire;
+    }
+
+    public bool isPicked()
+    {
+        return picked;
+    }
+
+
+    bool picked = false;
+    bool onFire = false;
+    public void SetOnFire()
+    {
+        onFire = true;
+    }
 }
