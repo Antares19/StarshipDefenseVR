@@ -18,7 +18,7 @@ public class UI : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Test());
+        //StartCoroutine(Test());
     }
     IEnumerator Test()
     {
