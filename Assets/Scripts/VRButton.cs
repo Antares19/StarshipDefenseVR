@@ -12,7 +12,7 @@ public class VRButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Controller")
+        if (other.tag == "GameController")
         {
             if (Time.realtimeSinceStartup - lastPressed >= MinPressInterval)
             {
