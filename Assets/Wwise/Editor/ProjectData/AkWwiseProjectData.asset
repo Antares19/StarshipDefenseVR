@@ -1,0 +1,252 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd2c0e1db61b1b4ba1f9f3dd0bd9df9, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: f97a5927754e9b4ba24bce8e86023d00
+    GuidInternal: 
+    m_lastTime: -8586210428956271047
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 67e129ea4c071144820648035b4043fc
+    GuidInternal: 
+    m_lastTime: -8586210428958056623
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: e7405ca61903c34fbaa59ff50ebde773
+    GuidInternal: 
+    m_lastTime: -8586209616695568033
+    List:
+    - name: Main
+      guid: e31e7ed099d082478a05d55781bb34a8
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      Path: Default Work Unit\Main
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: fe3bafed2c4c9742a74e321ab37fe770
+    GuidInternal: 
+    m_lastTime: -8586209621325388543
+    List:
+    - name: amb_river
+      guid: 4ac23b6cdce6074081e8394be31455b1
+      id: 45729008
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 4
+      - ElementName: amb_river
+        ObjectType: 3
+      Path: Default Work Unit\Ambient\amb_river
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: amb_wind_dark
+      guid: 0a59c321b1645244b00644c4e81dfbde
+      id: 225337123
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 4
+      - ElementName: amb_wind_dark
+        ObjectType: 3
+      Path: Default Work Unit\Ambient\amb_wind_dark
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: bild_set
+      guid: 069a70126e9d9b478c5443bde8d73405
+      id: 745020111
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: bild_set
+        ObjectType: 3
+      Path: Default Work Unit\Player\bild_set
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: break_building
+      guid: 6f83d325fb3daa40b32f81097c440cc1
+      id: 2146637009
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Destukction
+        ObjectType: 4
+      - ElementName: break_building
+        ObjectType: 3
+      Path: Default Work Unit\Destukction\break_building
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enemy_footsteps
+      guid: 2a3706462209d742be867e118f74fc6e
+      id: 3217092839
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 4
+      - ElementName: enemy_footsteps
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\enemy_footsteps
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enemy_switch_attack
+      guid: 63a22d1ea136be4f9044479398fea53f
+      id: 3232182425
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 4
+      - ElementName: enemy_switch_attack
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\enemy_switch_attack
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enemy_switch_fear
+      guid: ab6e123882730540a639c4fd1e15504d
+      id: 3274687119
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 4
+      - ElementName: enemy_switch_fear
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\enemy_switch_fear
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: enemy_voice
+      guid: 842bc1e70c2b344ca8b115f6f7dc0e26
+      id: 390963704
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 4
+      - ElementName: enemy_voice
+        ObjectType: 3
+      Path: Default Work Unit\Enemy\enemy_voice
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_amb_bird
+      guid: 212f7c9450402447a611c549e892bc85
+      id: 139049024
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 4
+      - ElementName: Play_amb_bird
+        ObjectType: 3
+      Path: Default Work Unit\Ambient\Play_amb_bird
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: wall_break
+      guid: f64f1e121085f24aa6c5710419334902
+      id: 11041865
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Destukction
+        ObjectType: 4
+      - ElementName: wall_break
+        ObjectType: 3
+      Path: Default Work Unit\Destukction\wall_break
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 9d8a819720650a44a61184823c7a61da
+    GuidInternal: 
+    m_lastTime: -8586210428958356826
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: d3e68e3522c1724bb7e1688340fa3860
+    GuidInternal: 
+    m_lastTime: -8586210428958697043
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 5eb5fe4f5fdbd2428a1ae1e0fc31fea7
+    GuidInternal: 
+    m_lastTime: -8586209622381274078
+    List:
+    - name: enemy_voice
+      guid: 278c266681c04942b67239a3bf19a3dd
+      id: 390963704
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: enemy_voice
+        ObjectType: 11
+      Path: Default Work Unit\enemy_voice
+      values:
+      - name: enemy_voice_fear
+        guid: a874aa8409e12b4fabd9513f3412cf91
+        id: 2500450829
+        PathAndIcons:
+        - ElementName: enemy_voice_fear
+          ObjectType: 10
+      - name: eneny_voice_attack
+        guid: fd6e4d35dfe22547a41170d4b41b4df1
+        id: 2025344636
+        PathAndIcons:
+        - ElementName: eneny_voice_attack
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 288f08d8ddf60743b4bc96dc3d6880f6
+    GuidInternal: 
+    m_lastTime: -8586210428957572555
+    List: []
+  ExpandedItems:
+  - /StarshipDefenseVR_WwiseProject
+  - /StarshipDefenseVR_WwiseProject/Events
+  - /StarshipDefenseVR_WwiseProject/Events/Default Work Unit
+  - /StarshipDefenseVR_WwiseProject/Events/Default Work Unit/Ambient
+  - /StarshipDefenseVR_WwiseProject/Events/Default Work Unit/Enemy
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
