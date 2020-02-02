@@ -17,7 +17,7 @@ public class EnemyState_AttachedToBuildingAndWaiting : EnemyState
 
     public override void OnStateEnter(EnemyData enemy, EnemyAI enemyAI)
     {
-        var building = enemy.CurrentTarget.GetComponent<Building>();
+        var building = enemy.TargetWaypoint.GetComponent<Building>();
         AttachToBuilding(enemy, building);
 
         enemy.Animator.SetBool("Grab", true);
@@ -29,7 +29,7 @@ public class EnemyState_AttachedToBuildingAndWaiting : EnemyState
     {
         enemy.BuildingAttachedTo = building;
         enemy.Transform.parent = building.transform;
-        enemy.CurrentTarget = null;
+        enemy.TargetWaypoint = null;
     }
 
 
