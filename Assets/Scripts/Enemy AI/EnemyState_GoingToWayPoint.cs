@@ -6,7 +6,6 @@ public class EnemyState_GoingToWayPoint : EnemyState
 {
     public override void Tick(EnemyData enemy, EnemyAI enemyAI)
     {
-        Debug.Log("tick");
         //ДВИГАЕМ МОБА
         enemyAI.Mover.Move(enemy.Transform, enemy.CurrentTarget.transform, enemyAI.EnemySpeedFree * enemyAI.DeltaTime);
 

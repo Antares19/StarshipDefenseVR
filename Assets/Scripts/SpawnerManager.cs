@@ -40,7 +40,6 @@ public class SpawnerManager : MonoBehaviour
     private void Spawn(Vector3 spawnPosition,GameObject nextNode)
     {
         Enemy enemy = _enemyPool.GetObjectFromPool();
-        Debug.Log(enemy);
         if (enemy == null)
             return;
 
