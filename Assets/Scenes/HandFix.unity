@@ -5609,6 +5609,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1733559958}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &175408212 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7043887968131911122, guid: ef69d3d1128d02244b1dcb80259bc4a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1733559958}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &175408216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9676,6 +9682,75 @@ Transform:
   m_Father: {fileID: 1711167072}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &274477494
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1536456096}
+    m_Modifications:
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.521
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.489
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041407957341313472, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_Name
+      value: Magic fire pro orange
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8ac5dc0f60315db4cbaef0b7f264ad12, type: 3}
 --- !u!1 &277778374
 GameObject:
   m_ObjectHideFlags: 0
@@ -21153,6 +21228,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748478200}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &756206553
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1469656396}
+    m_Modifications:
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.521
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.489
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041407957341313472, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_Name
+      value: Magic fire pro orange
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8ac5dc0f60315db4cbaef0b7f264ad12, type: 3}
 --- !u!1 &756934109
 GameObject:
   m_ObjectHideFlags: 0
@@ -38883,6 +39027,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a93bdbf99f47a8449bef39d8747ddddf, type: 3}
+--- !u!1 &1469656395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7043887968131551730, guid: 692fec006d2660f46a4bf5856b20eb5d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1242462384}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1469656396 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7043887968131911122, guid: 692fec006d2660f46a4bf5856b20eb5d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1242462384}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1469656400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469656395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19cc193b5867c724d85fea83997a5f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numberOfEnemiesNeededToCarry: 0
 --- !u!1 &1470532996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3122439512029886626, guid: 91c2aa6c906386944aa36465b8c9d1ee,
@@ -40626,6 +40795,12 @@ MonoBehaviour:
         m_CallState: 2
   receiveValidity:
     field: {fileID: 0}
+--- !u!4 &1536456096 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 461089521421961340, guid: 231c369dde7627d438c13b7e7240fa1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1510344503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1537421396 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6448605195277943161, guid: a8ac9b37a635c2f41bb96ce4c8c10fe0,
@@ -57104,6 +57279,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087713139}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &2090691234
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 175408212}
+    m_Modifications:
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.521
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.489
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295188422133162954, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041407957341313472, guid: 8ac5dc0f60315db4cbaef0b7f264ad12,
+        type: 3}
+      propertyPath: m_Name
+      value: Magic fire pro orange
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8ac5dc0f60315db4cbaef0b7f264ad12, type: 3}
 --- !u!1001 &2091601554
 PrefabInstance:
   m_ObjectHideFlags: 0
