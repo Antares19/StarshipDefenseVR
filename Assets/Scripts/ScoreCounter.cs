@@ -13,6 +13,10 @@ namespace Ar
 
         private UI _ui;
 
+        [SerializeField] private float _sessionTime = 120f;
+        private float _timeToEnd;
+        
+
         private void Awake()
         {
             totalHouses = _housePivot.childCount;
@@ -20,8 +24,16 @@ namespace Ar
 
             currentHouses = totalHouses;
 
-            _ui = GetComponent<UI>();
-            _ui.SetState(string.Format("{0} / {1}", currentHouses, totalHouses), 120f);
+            _ui = FindObjectOfType<UI>();
+            _timeToEnd = _sessionTime;
+            _ui.SetState(string.Format("{0} / {1}", currentHouses, totalHouses), _timeToEnd);
+            
+        }
+
+        private void Update()
+        {
+            _timeToEnd -= Time.deltaTime;
+            _ui.SetState(string.Format("{0} / {1}", currentHouses, totalHouses), _timeToEnd);
         }
     }
 }
