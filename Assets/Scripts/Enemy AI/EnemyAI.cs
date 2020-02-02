@@ -50,7 +50,7 @@ public class EnemyAI : MonoBehaviour
 
         var allBuildingsInScene = FindObjectsOfType<Building>();
         foreach (var building in allBuildingsInScene)
-        {
+        {            
             AddBuildingToList(building);
         }
 
@@ -88,7 +88,7 @@ public class EnemyAI : MonoBehaviour
     
     public void AddBuildingToList(Building building)
     {
-        Buildings.Add(building, new BuildingData());
+        Buildings.Add(building, new BuildingData(building));
         building.OnPlayerGrabbedBuilding += HandleBuildingGrabbed;
     }
 
@@ -172,9 +172,10 @@ public class BuildingData
     public bool IsBeingCarried { get; private set; }
     public Transform Transform { get; private set; }
 
-    public BuildingData()
+    public BuildingData(Building buildingMono)
     {
         DependentEnemies = new List<Enemy>();
+        Transform = buildingMono.transform;
     }
 
     public void StartCarryingToTarget(GameObject target)
