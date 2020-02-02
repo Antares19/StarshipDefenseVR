@@ -29,6 +29,30 @@ public class Building : MonoBehaviour
     bool onFire = false;
     public void SetOnFire()
     {
+        Debug.Log("FIRE_STARTED");
         onFire = true;
+    }
+
+
+    public void Update()
+    {
+        if (UnityEngine.Random.Range(0, 100) > 98 && !onFire)
+            SetOnFire();
+
+        
+        if (onFire)
+        {
+            Gizmos.color = Color.white;
+            Debug.DrawRay(transform.position, new Vector3(2, 2, 2));
+
+
+            if (transform.position.y< 0.1)
+            {
+                onFire = false;
+            }
+        }
+            
+
+
     }
 }
