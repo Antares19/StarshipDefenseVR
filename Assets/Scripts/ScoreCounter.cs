@@ -27,7 +27,10 @@ namespace Ar
             _ui = FindObjectOfType<UI>();
             _timeToEnd = _sessionTime;
             _ui.SetState(string.Format("{0} / {1}", currentHouses, totalHouses), _timeToEnd);
-            
+
+            Messenger.AddListener(HomeEvent.lostHome, OnHomeLost);
+            Messenger.AddListener(HomeEvent.receiveHome, OnHomeReceive);
+
         }
 
         private void Update()
@@ -35,5 +38,23 @@ namespace Ar
             _timeToEnd -= Time.deltaTime;
             _ui.SetState(string.Format("{0} / {1}", currentHouses, totalHouses), _timeToEnd);
         }
+
+        private void OnHomeLost()
+        {
+            currentHouses--;
+        }
+
+        private void  OnHomeReceive()
+        {
+            currentHouses++;
+        }
+
+        private void OnDestroy()
+        {
+            Messenger.RemoveListener(HomeEvent.lostHome, OnHomeLost);
+            Messenger.RemoveListener(HomeEvent.receiveHome, OnHomeReceive);
+        }
     }
+
+   
 }
