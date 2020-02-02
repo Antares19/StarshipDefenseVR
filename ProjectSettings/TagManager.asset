@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - SpawnPoint
   - SpawnPool
+  - BuildingMesh
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,8 @@ TagManager:
   - Buildings
   - infrastructure
   - Enemy
+  - UnderGround
   - Ground
-  - 
   - 
   - 
   - 
