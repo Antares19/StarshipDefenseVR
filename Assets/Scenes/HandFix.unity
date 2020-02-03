@@ -55471,7 +55471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _housePivot: {fileID: 1482237989}
-  _sessionTime: 180
+  _sessionTime: 10
 --- !u!4 &1942862293
 Transform:
   m_ObjectHideFlags: 0
