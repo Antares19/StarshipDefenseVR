@@ -7,7 +7,13 @@ public class EnemyState_AttachedToBuildingAndWaiting : EnemyState
     public override void Tick(EnemyData enemy, EnemyAI enemyAI)
     {
         var building = enemy.BuildingAttachedTo;
-        if (enemyAI.Buildings[building].DependentEnemies.Count >= building.NumberOfEnemiesNeededToCarry)
+
+        if (building.isOnFire())
+        {
+            GoToNextWaypoint(enemy, enemyAI, building);
+        }
+
+        else if (enemyAI.Buildings[building].DependentEnemies.Count >= building.NumberOfEnemiesNeededToCarry)
         {
             //определяем точку назначения и несём
             //enemyAI.Buildings[building].StartCarryingToTarget
@@ -21,12 +27,20 @@ public class EnemyState_AttachedToBuildingAndWaiting : EnemyState
             }
 
             Debug.Log(enemy.TargetWaypoint);
-            enemyAI.Buildings[building].DependentEnemies.Remove(enemy.EnemyMono);
-            enemy.BuildingAttachedTo = null;
-            enemyAI.FindNewTargetNodeForEnemy(enemy);
-            enemyAI.TurnEnemyToFaceTarget(enemy);
-            enemyAI.State_GoingToWaypoint.OnStateEnter(enemy, enemyAI);
+            GoToNextWaypoint(enemy, enemyAI, building);
         }
+
+
+    }
+
+    private static void GoToNextWaypoint(EnemyData enemy, EnemyAI enemyAI, Building building)
+    {
+        enemyAI.Buildings[building].DependentEnemies.Remove(enemy.EnemyMono);
+        enemy.BuildingAttachedTo = null;
+        enemy.TargetBuilding = null;
+        enemyAI.FindNewTargetNodeForEnemy(enemy);
+        enemyAI.TurnEnemyToFaceTarget(enemy);
+        enemyAI.State_GoingToWaypoint.OnStateEnter(enemy, enemyAI);
     }
 
     public override void OnStateEnter(EnemyData enemy, EnemyAI enemyAI)
@@ -49,6 +63,7 @@ public class EnemyState_AttachedToBuildingAndWaiting : EnemyState
         enemy.BuildingAttachedTo = building;        
         enemy.Transform.parent = building.transform;
     }
+    
 
 
 }

@@ -126,7 +126,7 @@ public class Node : MonoBehaviour
         });
 
 
-        _buildings.RemoveRange(2, _buildings.Count - 2);
+        _buildings.RemoveRange(3, _buildings.Count - 3);
 
         /*
         nodesToPlayerTransform = new Transform[3];
